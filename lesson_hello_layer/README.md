@@ -1,30 +1,49 @@
-# yocto-learning-journey
+## 1. Create a Layer with BitBake
 
-#1 Creating layer with bitbake 
+```bash
 bitbake-layers create-layer --example-recipe-name hellorecipe ~/yocto/layers/meta-hello
+```
 
+---
 
-#2 Adding layer to bblayers.conf 
+## 2. Add the Layer to `bblayers.conf`
 
-#Output is in yocto-configs directory 
- 
+Output is in the `yocto-configs` directory.
+
+```bash
 bitbake-layers add-layer ~/yocto/layers/meta-hello
+```
 
-#3 Recipe development : 
+---
 
-Added source file hello.c in files under recipe directory . 
-Added do_compile and do_install to the recipe 
-Updated the local.conf file to append the recipe to the image with : 
+## 3. Recipe Development
+
+* Added a source file `hello.c` in the `files/` directory under the recipe.
+* Added `do_compile` and `do_install` functions to the recipe - [hellorecipe_0.1.bb](./meta-hello/recipes-hellorecipe/hellorecipe/hellorecipe_0.1.bb).
+* Updated `local.conf` to include the recipe in the image:
+
+```conf
 IMAGE_INSTALL:append = " hellorecipe"
-run command bitbake hellorecipe 
+```
 
-#4 building core-image-minimal again 
+* Build the recipe:
 
-bibtake core-image-minimal 
+```bash
+bitbake hellorecipe
+```
 
-#5 run on qemu : 
+---
 
-runqemu core-image-minimal nographic 
+## 4. Build `core-image-minimal` Again
 
+```bash
+bitbake core-image-minimal
+```
 
- 
+---
+
+## 5. Run the Image on QEMU
+
+```bash
+runqemu core-image-minimal nographic
+```

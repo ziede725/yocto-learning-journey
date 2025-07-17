@@ -1,14 +1,17 @@
 # Yocto Learning Journey
 
-This repository tracks my learning journey with the **Yocto Project**, following the [Techleef YouTube channel](https://www.youtube.com/@Techleef).
+This repository tracks my learning journey with the **Yocto Project**, following the [Techleef YouTube channel](https://www.youtube.com/@techleef-tn).
 
 ## Lessons
 
 ### `lesson_hello_layer`
+- [Hello Layer](./lesson_hello_layer/README.md)
 
 > This is a basic Yocto layer that contains a recipe with a locally created `hello.c` file.
 
 ### `lesson_hellofromgit_layer`
+
+- [Hello From Git Layer](./lesson_hellofromgit_layer/README.md)
 
 > This layer demonstrates how to:
 > 
