@@ -1,8 +1,20 @@
-This repo tracks my learning journey of yocto following techleef channel on youtube . 
+# Yocto Learning Journey
 
-lesson_hello_layer : 
-- This is just a layer that contained a recipe with a hello.c file created locally . 
+This repository tracks my learning journey with the **Yocto Project**, following the [Techleef YouTube channel](https://www.youtube.com/@Techleef).
 
-lesson_hellofromgit_layer : 
-- This layer showcases how to get source files from git and managing dependencies of recipes , also using symbolic linking for (soname , realname , and linkername for a shared library ) 
- 
+## Lessons
+
+### `lesson_hello_layer`
+
+> This is a basic Yocto layer that contains a recipe with a locally created `hello.c` file.
+
+### `lesson_hellofromgit_layer`
+
+> This layer demonstrates how to:
+> 
+> - Fetch source files from a Git repository.
+> - Manage recipe dependencies.
+> - Use symbolic linking for a shared library:
+>   - `soname`
+>   - `realname`
+>   - `linkername`
